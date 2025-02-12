@@ -1,0 +1,19 @@
+<?php
+
+class Electronics extends Product {
+    public $warranty_period;
+
+    // Constructor accepts properties and calls the parent constructor
+    public function __construct($name, $price, $category, $warranty_period) {
+        parent::__construct($name, $price, $category);
+        $this->warranty_period = $warranty_period;
+    }
+
+    // Override the getDetails method to include warranty information
+    public function getDetails() {
+        $parent_details = parent::getDetails();
+        return "$parent_details, Warranty Period: $this->warranty_period years";
+    }
+}
+
+?>
