@@ -1,0 +1,17 @@
+<?php
+class Food extends Product {
+    public $expiration_date;
+
+    // Constructor accepts properties and calls the parent constructor
+    public function __construct($name, $price, $category, $expiration_date) {
+        parent::__construct($name, $price, $category);
+        $this->expiration_date = $expiration_date;
+    }
+
+    // Override the getDetails method to include expiration date information
+    public function getDetails() {
+        $parent_details = parent::getDetails();
+        return "$parent_details, Expiration Date: $this->expiration_date";
+    }
+}
+?>
