@@ -1,0 +1,31 @@
+<?php
+require_once "Food.php";
+require_once "Electronics.php";
+require_once "Clothe.php";
+$electronics = new Electronics("Smartphone", 999, "Electronics", 2);
+$food = new Food("Apple", 1.5, "Food", "2025-12-31");
+$clothe = new Clothe("T-Shirt", 20, "Clothing", "M", "Cotton");
+
+// Using getDetails() and displaying the output
+echo $electronics->getDetails() . "<br>";
+echo $food->getDetails() . "<br>";
+echo $clothe->getDetails() . "<br>";
+
+// Running the program 3 times with different values
+$electronics2 = new Electronics("Laptop", 1500, "Electronics", 3);
+$food2 = new Food("Banana", 1, "Food", "2024-06-15");
+$clothe2 = new Clothe("Jeans", 40, "Clothing", "L", "Denim");
+
+echo $electronics2->getDetails() . "<br>";
+echo $food2->getDetails() . "<br>";
+echo $clothe2->getDetails() . "<br>";
+
+$electronics3 = new Electronics("Tablet", 350, "Electronics", 1);
+$food3 = new Food("Orange", 2, "Food", "2025-03-30");
+$clothe3 = new Clothe("Sweater", 45, "Clothing", "S", "Wool");
+
+echo $electronics3->getDetails() . "<br>";
+echo $food3->getDetails() . "<br>";
+echo $clothe3->getDetails() . "<br>";
+
+?>
