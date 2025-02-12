@@ -1,0 +1,19 @@
+<?php
+class Clothe extends Product {
+    public $size;
+    public $material;
+
+    // Constructor accepts properties and calls the parent constructor
+    public function __construct($name, $price, $category, $size, $material) {
+        parent::__construct($name, $price, $category);
+        $this->size = $size;
+        $this->material = $material;
+    }
+
+    // Override the getDetails method to include size and material information
+    public function getDetails() {
+        $parent_details = parent::getDetails();
+        return "$parent_details, Size: $this->size, Material: $this->material";
+    }
+}
+?>
